@@ -2,6 +2,7 @@ package AIDSA.project.Controller;
 
 import AIDSA.project.Models.Student;
 import AIDSA.project.Services.StudentServices;
+import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,8 +36,8 @@ public class StudentController {
     @DeleteMapping("deletebyid/{id}")
     public ResponseEntity<?> deleteById(@PathVariable long id) {
         try {
-            Student response=studentServices.deletebyid(id);
-            return new ResponseEntity<>(response, HttpStatus.OK);
+            studentServices.deletebyid(id);
+            return new ResponseEntity<>("Deleted Successfully", HttpStatus.OK);
         } catch (RuntimeException exception) {
             return new ResponseEntity<>("not found", HttpStatus.NOT_FOUND);
         }

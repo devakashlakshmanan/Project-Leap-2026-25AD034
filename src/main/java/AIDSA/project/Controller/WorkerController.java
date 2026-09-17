@@ -35,8 +35,8 @@ public class WorkerController {
     @DeleteMapping("deletebyid/{id}")
     public ResponseEntity<?> deleteById(@PathVariable long id) {
         try {
-            Worker response=workerServices.deletebyid(id);
-            return new ResponseEntity<>(response, HttpStatus.OK);
+            workerServices.deletebyid(id);
+            return new ResponseEntity<>("Delete Successfully", HttpStatus.OK);
         } catch (RuntimeException exception) {
             return new ResponseEntity<>("not found", HttpStatus.NOT_FOUND);
         }

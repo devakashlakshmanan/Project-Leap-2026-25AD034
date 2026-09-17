@@ -22,8 +22,8 @@ public class StaffServices {
     public Staff updatestaff(Staff data){
         return staffRepository.save(data);
     }
-    public Staff deletebyid(Long Id){
-        return staffRepository.findById(Id).orElseThrow(()-> new RuntimeException(("AIDS Not Found")));
+    public void deletebyid(Long Id){
+        staffRepository.deleteById(Id);
     }
     public Staff getbyid(Long Id){
         return staffRepository.findById(Id).orElseThrow(()-> new RuntimeException(("AIDS Not Found")));

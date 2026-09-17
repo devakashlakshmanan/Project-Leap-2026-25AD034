@@ -21,8 +21,8 @@ public class WorkerServices {
     public Worker updateworker(Worker data){
         return workerRepository.save(data);
     }
-    public Worker deletebyid(Long Id){
-        return workerRepository.findById(Id).orElseThrow(()-> new RuntimeException(("AIDS Not Found")));
+    public void deletebyid(Long Id){
+        workerRepository.deleteById(Id);
     }
     public Worker getbyid(Long Id){
         return workerRepository.findById(Id).orElseThrow(()-> new RuntimeException(("AIDS Not Found")));

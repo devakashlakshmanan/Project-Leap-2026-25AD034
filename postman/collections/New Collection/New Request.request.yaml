@@ -1,4 +1,7 @@
 $kind: http-request
-url: ""
-method: GET
+url: http://localhost:8082/api/student/deletebyid/202
+method: DELETE
+body:
+  type: json
+  content: ""
 order: 1789620160085

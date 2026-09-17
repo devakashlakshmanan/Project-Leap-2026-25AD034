@@ -35,8 +35,8 @@ public class StaffController {
     @DeleteMapping("deletebyid/{id}")
     public ResponseEntity<?> deleteById(@PathVariable long id) {
         try {
-            Staff response=staffServices.deletebyid(id);
-            return new ResponseEntity<>(response, HttpStatus.OK);
+            staffServices.deletebyid(id);
+            return new ResponseEntity<>("Deleted Successfully", HttpStatus.OK);
         } catch (RuntimeException exception) {
             return new ResponseEntity<>("not found", HttpStatus.NOT_FOUND);
         }
