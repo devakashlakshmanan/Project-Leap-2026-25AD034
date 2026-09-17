@@ -7,14 +7,11 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Student {
+public class Staff {
     @Id
     @GeneratedValue
     Long Id;
     String Name;
-    String RollNo;
     String Dept;
-    int Year;
     int DOB;
-    float CGPA;
 }

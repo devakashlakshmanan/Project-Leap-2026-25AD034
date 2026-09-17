@@ -1,4 +1,4 @@
-package AIDSA.project;
+package AIDSA.project.Repository;
 import AIDSA.project.Models.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
